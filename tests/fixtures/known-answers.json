@@ -1,0 +1,79 @@
+{
+ "_about": "Independent known answers for the Utah Central (ftUS) + NAVD88 (ftUS) -> WGS84 + EGM96 chain. Horizontal from NGS NCAT (SPC zone 4302). GEOID18 N from the NGS geoid API (GEOID18). EGM96 N from GeographicLib egm96-5.pgm via pygeodesy GeoidKarney (5-arcmin grid; PROJ uses the 15-arcmin us_nga_egm96_15.tif, so expect up to ~5 cm difference on that step). Fetched 2026-10-10.",
+ "tolerances": {
+  "horizontal_m": 0.005,
+  "geoid18_step_m": 0.02,
+  "egm96_step_m": 0.05
+ },
+ "points": [
+  {
+   "input": {
+    "e_ftUS": 1551000.0,
+    "n_ftUS": 7428000.0,
+    "H_navd88_ftUS": 4260.0
+   },
+   "ncat": {
+    "lat": "40.7112898242",
+    "lon": "-111.8225264282",
+    "zone": "UT C-4302"
+   },
+   "ngs_geoid18": {
+    "N_m": -16.522,
+    "error_m": 0.036,
+    "model": "GEOID18"
+   },
+   "derived": {
+    "H_navd88_m": 1298.4505969011936,
+    "h_ellipsoid_nad83_2011_m": 1281.9285969011937,
+    "egm96_N_m_geographiclib": -16.937358988392003,
+    "H_egm96_m_expected": 1298.8659558895856
+   }
+  },
+  {
+   "input": {
+    "e_ftUS": 1548500.0,
+    "n_ftUS": 7431200.0,
+    "H_navd88_ftUS": 4245.5
+   },
+   "ncat": {
+    "lat": "40.7200477393",
+    "lon": "-111.8315866509",
+    "zone": "UT C-4302"
+   },
+   "ngs_geoid18": {
+    "N_m": -16.571,
+    "error_m": 0.035,
+    "model": "GEOID18"
+   },
+   "derived": {
+    "H_navd88_m": 1294.0309880619761,
+    "h_ellipsoid_nad83_2011_m": 1277.4599880619762,
+    "egm96_N_m_geographiclib": -16.940959734074184,
+    "H_egm96_m_expected": 1294.4009477960503
+   }
+  },
+  {
+   "input": {
+    "e_ftUS": 1553750.25,
+    "n_ftUS": 7425100.75,
+    "H_navd88_ftUS": 4271.1
+   },
+   "ncat": {
+    "lat": "40.7033590512",
+    "lon": "-111.8125697978",
+    "zone": "UT C-4302"
+   },
+   "ngs_geoid18": {
+    "N_m": -16.462,
+    "error_m": 0.036,
+    "model": "GEOID18"
+   },
+   "derived": {
+    "H_navd88_m": 1301.8338836677674,
+    "h_ellipsoid_nad83_2011_m": 1285.3718836677674,
+    "egm96_N_m_geographiclib": -16.931082755140576,
+    "H_egm96_m_expected": 1302.302966422908
+   }
+  }
+ ]
+}

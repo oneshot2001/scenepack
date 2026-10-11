@@ -1,0 +1,25 @@
+scenepack v0
+Code: MIT, Copyright (c) 2026 Matthew Visher; see LICENSE.
+
+Bundled geoid grids are public-domain US government data, redistributed in
+GeoTIFF format by PROJ-data. Their licensing is separate from scenepack's code.
+Source and public-domain attribution follow the supplied project packet;
+no network lookup or download was performed during this build.
+
+GEOID18 (NOAA / National Geodetic Survey)
+File: scenepack/grids/us_noaa_g2018u0.tif
+SHA-256: fa9a407ac7ee3f5a3694008e4bcd09ce9cc250452f0c3b11700a4960340abce2
+Redistribution: https://cdn.proj.org/us_noaa_g2018u0.tif
+Upstream: https://geodesy.noaa.gov/GEOID/GEOID18/
+PROJ-data: https://github.com/OSGeo/PROJ-data/tree/master/us_noaa
+
+EGM96 (National Geospatial-Intelligence Agency)
+File: scenepack/grids/us_nga_egm96_15.tif
+SHA-256: db493027562c9b004d7220fa881f5603adada4e1c5029b933fa7de4547b0e78d
+Redistribution: https://cdn.proj.org/us_nga_egm96_15.tif
+PROJ-data: https://github.com/OSGeo/PROJ-data/tree/master/us_nga
+
+The installed pyproj distribution and its bundled PROJ runtime/database retain
+their own upstream licenses. This project pins pyproj 3.8.0; tested PROJ 9.8.1.
+Both authored CSV fixtures are synthetic. The supplied known-answer reference
+documents its independent sources and the separate step tolerances.

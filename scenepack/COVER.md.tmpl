@@ -1,0 +1,27 @@
+# Scene package cover sheet
+
+Package digest: `{{package_digest}}`  (record this somewhere the package cannot touch)
+Packed: {{packed_at}}  ·  scenepack {{scenepack_version}}  ·  pyproj {{pyproj_version}} / PROJ {{proj_version}}
+
+## 1. Source
+Agency: {{agency}}  ·  Case label: {{case_label}}  ·  Operator: {{operator}}
+Instrument: {{instrument_model}} s/n {{instrument_serial}}  ·  Calibration record: {{calibration_ref}}
+Control tie: {{control_tie_summary}}
+Supporting records declared missing: {{missing_records}}
+
+## 2. Import
+File: `{{raw_file}}`  sha256 `{{raw_sha256}}`  ·  {{point_count}} points  ·  order {{column_order}}  ·  units {{h_unit}} / {{v_unit}}  ·  CRS {{h_crs}} + {{v_crs}}
+Point classes: {{class_counts}}  ·  Uncertainty: {{uncertainty_status}}
+
+## 3. Transform
+{{transform_summary}}
+
+## 4. Exports
+{{exports_summary}}
+
+## 5. It proves / it does not prove
+Proves: {{proves_summary}}
+Does not prove: that the survey was done right (field_accuracy: {{field_accuracy}}); who handled the file (custody_continuity: {{custody_continuity}}); that every measured point is here (completeness: {{completeness}}); that this copy is the packed copy (compare the digest above with your independently recorded one); admissibility (legal_admissibility: {{legal_admissibility}}).
+
+## 6. Re-check by someone else
+`scenepack verify <this zip>` on a machine with no network. It reports preservation (hashes) and recomputation (residual per point against {{tolerance_m}} m) as two separate results.

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scenepack"
+version = "0.1.0"
+description = "Offline evidence packages for survey points"
+requires-python = ">=3.12"
+dependencies = ["pyproj==3.8.0"]
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+
+[project.scripts]
+scenepack = "scenepack.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.setuptools.package-data]
+scenepack = ["COVER.md.tmpl", "grids/*.tif"]
+
+[tool.setuptools.packages.find]
+include = ["scenepack*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
